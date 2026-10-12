@@ -1,4 +1,4 @@
-![mugsun-app](https://raw.githubusercontent.com/mugsun/mugsun-docs/main/public/brand/banners/repos/mugsun-app.png)
+![mugsun-app](https://raw.githubusercontent.com/mugsun/mugsun-docs/main/public/brand/banners/repos/mugsun-app-en.png)
 
 # mugsun-app
 

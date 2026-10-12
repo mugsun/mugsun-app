@@ -2,45 +2,67 @@
 
 **中文** | [English](README_EN.md)
 
-![uni-app x](https://img.shields.io/badge/uni--app%20x-UTS-blue)
-![Vue](https://img.shields.io/badge/Vue-3-4FC08D?logo=vuedotjs&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![Status](https://img.shields.io/badge/status-source%20not%20published-lightgrey)](https://github.com/mugsun/mugsun-app)
+[![GitHub](https://img.shields.io/badge/GitHub-mugsun%2Fmugsun--app-181717?logo=github)](https://github.com/mugsun/mugsun-app)
 
-**Mugsun 低代码平台的移动端**——基于 uni-app x（UTS），覆盖 Android / iOS / 鸿蒙 / 微信小程序，对接 [mugsun-boot](https://github.com/mugsun/mugsun-boot) 后端。
+mugsun 平台的**移动端应用仓库**（规划对接 [mugsun-boot](https://github.com/mugsun/mugsun-boot)）。公开仓库当前**仅有本说明文件**，尚未包含可构建的应用源码（无 `package.json` / `pages.json` / `manifest` / 业务页面）。
 
-## ✨ 功能
+> 旧 README 中的功能列表、平台矩阵与「打开即可跑」步骤已过时，**不得当作现状**。下列内容只陈述仓库事实与产品边界。
 
-- 登录鉴权（对接 Sa-Token）
-- 工作台 / 待办 / 消息 / 个人中心等移动办公页面
-- 与 mugsun-pc 共用同一套后端菜单与权限体系
+## 当前状态
 
-## 🗂 仓库全景
+| 项 | 事实（截至本 README） |
+| --- | --- |
+| 公开内容 | `README.md`、`README_EN.md` |
+| 应用源码 | **未发布** |
+| LICENSE 文件 | **尚未加入仓库** |
+| 可复制的启动命令 | **无**（缺少工程文件） |
+| 与 boot 的联调说明 | 待源码落地后补充（鉴权、环境变量、API 基址等以届时代码为准） |
 
-与平台其余仓库**平级 clone**：
+仓库 GitHub 描述仍写明意向：基于 **uni-app x**，面向 Android / iOS / 鸿蒙 / 小程序，对接 mugsun-boot。该描述是产品方向，**不是**对本仓已有代码的验收结论。
 
-```
+## 在平台中的位置
+
+与其它仓**平级 clone**（应用源码发布后同样如此）：
+
+```text
 mugsun/
-├── mugsun-core      # 后端 BOM + Starter
-├── mugsun-boot      # 后端服务（:8080）
-├── mugsun-pc        # PC 管理端
-├── mugsun-track     # 埋点 SDK
-└── mugsun-app       # 本仓（移动端）
+├── mugsun-core      # BOM + starter
+├── mugsun-boot      # 后端（HTTP / WebSocket）
+├── mugsun-pc        # PC 管理台
+├── mugsun-track     # Web 埋点 SDK
+├── mugsun-docs      # 文档站 https://docs.mugsun.com/
+└── mugsun-app       # 本仓（移动端 · 源码待发布）
 ```
 
-## 🚀 快速开始
+```mermaid
+graph LR
+  APP["mugsun-app<br/>移动端（待发布）"]
+  BOOT["mugsun-boot"]
+  PC["mugsun-pc"]
+  UI["mugsun-uniappx-ui<br/>私有组件库"]
+  APP -.->|"规划：HTTP 对接"| BOOT
+  PC -->|"已对接"| BOOT
+  UI -.->|"规划：组件供给"| APP
+```
 
-1. 使用 [HBuilderX](https://www.dcloud.io/hbuilderx.html) 或 uni-app x CLI 打开本仓
-2. 启动本地 [mugsun-boot](https://github.com/mugsun/mugsun-boot)
-3. 在 `api/` 或配置中指向后端地址，运行到模拟器或真机
+相关但**未开源 / 不在本仓**：
 
-## ⭐ Star History
+- [mugsun-uniappx-ui](https://github.com/mugsun/mugsun-uniappx-ui)（私有）— uni-app x 组件库意向，**不是**已公开的可 npm 安装产品。
+- [mugsun-uniappx-sdk](https://github.com/mugsun/mugsun-uniappx-sdk)（私有）— UTS / SDK 扩展意向。
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mugsun/mugsun-app&type=Date)](https://star-history.com/#mugsun/mugsun-app&Date)
+不要把上述私有仓写成「克隆本仓即可安装」。
 
-## 📄 许可证
+## 源码发布前你可以做什么
 
-[MIT License](LICENSE)
+1. 先跑通后端与管理台：见 [mugsun-boot](https://github.com/mugsun/mugsun-boot)、[mugsun-pc](https://github.com/mugsun/mugsun-pc) 与文档 [快速开始](https://docs.mugsun.com/guide/getting-started)。
+2. 关注本仓后续提交；源码落地后，本 README 会改为真实工程结构、环境变量与启动步骤（只写代码里存在的内容）。
+3. 文档站：[https://docs.mugsun.com/](https://docs.mugsun.com/) · 品牌站：[https://mugsun.com](https://mugsun.com)
+
+## 许可证
+
+仓库内尚无 `LICENSE` 文件。开源许可将在应用源码一并发布时确定；在此之前请勿假设为 MIT 或其它协议。
 
 ---
 
-如果这个项目对你有帮助，欢迎 Star ⭐ 支持一下！
+维护说明：本 README 随「源码是否进仓」更新；有工程文件后再写快速开始与平台/环境细节。

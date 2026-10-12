@@ -2,45 +2,67 @@
 
 [English](README_EN.md) | **简体中文** ([README.md](README.md))
 
-![uni-app x](https://img.shields.io/badge/uni--app%20x-UTS-blue)
-![Vue](https://img.shields.io/badge/Vue-3-4FC08D?logo=vuedotjs&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![Status](https://img.shields.io/badge/status-source%20not%20published-lightgrey)](https://github.com/mugsun/mugsun-app)
+[![GitHub](https://img.shields.io/badge/GitHub-mugsun%2Fmugsun--app-181717?logo=github)](https://github.com/mugsun/mugsun-app)
 
-**The mobile client of the Mugsun low-code platform** — built with uni-app x (UTS) for Android, iOS, HarmonyOS, and WeChat mini programs, backed by [mugsun-boot](https://github.com/mugsun/mugsun-boot).
+Reserved repository for the **mugsun mobile client**, intended to talk to [mugsun-boot](https://github.com/mugsun/mugsun-boot). The public tree currently contains **only these README files** — no buildable app sources (`package.json`, `pages.json`, `manifest`, or feature pages).
 
-## ✨ Features
+> Older README claims (feature lists, platform matrix, “open and run” steps) are outdated and **must not** be treated as fact. Below is only what the repository and product boundary actually show.
 
-- Authentication against Sa-Token
-- Mobile workspace: home, todos, messages, profile, and more
-- Shares backend menus and permissions with mugsun-pc
+## Current status
 
-## 🗂 Repository layout
+| Item | Fact (as of this README) |
+| --- | --- |
+| Public contents | `README.md`, `README_EN.md` |
+| Application source | **Not published** |
+| `LICENSE` file | **Not in the repo** |
+| Copy-paste run commands | **None** (no project files) |
+| Boot integration guide | To be added when source lands (auth, env, API base — only from real code) |
 
-Clone **side by side** with the rest of the platform:
+The GitHub description still states the **intent**: **uni-app x**, targeting Android / iOS / HarmonyOS / mini programs, backed by mugsun-boot. That is product direction, **not** a claim that this repo already ships that code.
 
-```
+## Place in the platform
+
+Clone **side by side** with the other repos (same layout once sources exist):
+
+```text
 mugsun/
-├── mugsun-core      # backend BOM + starters
-├── mugsun-boot      # backend service (:8080)
-├── mugsun-pc        # PC admin UI
-├── mugsun-track     # analytics SDK
-└── mugsun-app       # this repo (mobile)
+├── mugsun-core      # BOM + starters
+├── mugsun-boot      # backend (HTTP / WebSocket)
+├── mugsun-pc        # PC admin
+├── mugsun-track     # Web analytics SDK
+├── mugsun-docs      # docs site https://docs.mugsun.com/
+└── mugsun-app       # this repo (mobile · source pending)
 ```
 
-## 🚀 Quick start
+```mermaid
+graph LR
+  APP["mugsun-app<br/>mobile (pending)"]
+  BOOT["mugsun-boot"]
+  PC["mugsun-pc"]
+  UI["mugsun-uniappx-ui<br/>private UI kit"]
+  APP -.->|"planned: HTTP"| BOOT
+  PC -->|"live"| BOOT
+  UI -.->|"planned: components"| APP
+```
 
-1. Open this repo in [HBuilderX](https://www.dcloud.io/hbuilderx.html) or the uni-app x CLI
-2. Start local [mugsun-boot](https://github.com/mugsun/mugsun-boot)
-3. Point `api/` or app config to the backend URL, then run on a simulator or device
+Related but **not open / not in this repo**:
 
-## ⭐ Star History
+- [mugsun-uniappx-ui](https://github.com/mugsun/mugsun-uniappx-ui) (private) — uni-app x component library intent; **not** a public installable product.
+- [mugsun-uniappx-sdk](https://github.com/mugsun/mugsun-uniappx-sdk) (private) — UTS / SDK extension intent.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mugsun/mugsun-app&type=Date)](https://star-history.com/#mugsun/mugsun-app&Date)
+Do not document those private repos as “clone this repo and install.”
 
-## 📄 License
+## What to do before source is published
 
-[MIT License](LICENSE)
+1. Run the backend and admin UI first: [mugsun-boot](https://github.com/mugsun/mugsun-boot), [mugsun-pc](https://github.com/mugsun/mugsun-pc), and [Getting started](https://docs.mugsun.com/en/guide/getting-started).
+2. Watch this repository for commits; when sources land, this README will describe the real tree, env vars, and run steps — only what the code contains.
+3. Docs: [https://docs.mugsun.com/](https://docs.mugsun.com/) · Site: [https://mugsun.com](https://mugsun.com)
+
+## License
+
+There is no `LICENSE` file in the repository yet. The open-source license will be set when application source is published; do not assume MIT or any other license until then.
 
 ---
 
-If this project helps you, a star ⭐ means a lot!
+Maintainer note: refresh this README when application sources enter the tree; add quick start and platform/env details only from those files.

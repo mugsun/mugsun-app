@@ -42,7 +42,7 @@ graph LR
   APP["mugsun-app<br/>mobile (pending)"]
   BOOT["mugsun-boot"]
   PC["mugsun-pc"]
-  UI["mugsun-uniappx-ui<br/>private UI kit"]
+  UI["mugsun-uniappx-ui<br/>commercial UI kit"]
   APP -.->|"planned: HTTP"| BOOT
   PC -->|"live"| BOOT
   UI -.->|"planned: components"| APP
@@ -50,7 +50,7 @@ graph LR
 
 Related but **not open / not in this repo**:
 
-- [mugsun-uniappx-ui](https://github.com/mugsun/mugsun-uniappx-ui) (private) — uni-app x component library intent; **not** a public installable product.
+- `mugsun-uniappx-ui` (commercial edition, source not public) — uni-app x component library; see [the ms-ui docs](https://docs.mugsun.com/en/uniappx/) for usage.
 - [mugsun-uniappx-sdk](https://github.com/mugsun/mugsun-uniappx-sdk) (private) — UTS / SDK extension intent.
 
 Do not document those private repos as “clone this repo and install.”

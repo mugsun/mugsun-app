@@ -42,7 +42,7 @@ graph LR
   APP["mugsun-app<br/>移动端（待发布）"]
   BOOT["mugsun-boot"]
   PC["mugsun-pc"]
-  UI["mugsun-uniappx-ui<br/>私有组件库"]
+  UI["mugsun-uniappx-ui<br/>商业版组件库"]
   APP -.->|"规划：HTTP 对接"| BOOT
   PC -->|"已对接"| BOOT
   UI -.->|"规划：组件供给"| APP
@@ -50,7 +50,7 @@ graph LR
 
 相关但**未开源 / 不在本仓**：
 
-- [mugsun-uniappx-ui](https://github.com/mugsun/mugsun-uniappx-ui)（私有）— uni-app x 组件库意向，**不是**已公开的可 npm 安装产品。
+- `mugsun-uniappx-ui`（商业版，源码不公开）— uni-app x 组件库；使用文档见 [文档站 ms-ui 章节](https://docs.mugsun.com/uniappx/)。
 - [mugsun-uniappx-sdk](https://github.com/mugsun/mugsun-uniappx-sdk)（私有）— UTS / SDK 扩展意向。
 
 不要把上述私有仓写成「克隆本仓即可安装」。

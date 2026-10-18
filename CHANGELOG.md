@@ -8,6 +8,7 @@
 
 - 当前为开发中状态，尚未标注正式版本号或 GitHub Release
 - 能力与联调路径见 README
+- 新增 MIT `LICENSE`
 
 ### 计划
 

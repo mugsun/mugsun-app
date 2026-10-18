@@ -6,6 +6,7 @@
 
 [![Status](https://img.shields.io/badge/status-source%20not%20published-lightgrey)](https://github.com/mugsun/mugsun-app)
 [![GitHub](https://img.shields.io/badge/GitHub-mugsun%2Fmugsun--app-181717?logo=github)](https://github.com/mugsun/mugsun-app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 Reserved repository for the **mugsun mobile client**, intended to talk to [mugsun-boot](https://github.com/mugsun/mugsun-boot). The public tree currently contains **only these README files** — no buildable app sources (`package.json`, `pages.json`, `manifest`, or feature pages).
 
@@ -15,9 +16,9 @@ Reserved repository for the **mugsun mobile client**, intended to talk to [mugsu
 
 | Item | Fact (as of this README) |
 | --- | --- |
-| Public contents | `README.md`, `README_EN.md` |
+| Public contents | `README.md`, `README_EN.md`, `LICENSE` |
 | Application source | **Not published** |
-| `LICENSE` file | **Not in the repo** |
+| License | [MIT](./LICENSE) |
 | Copy-paste run commands | **None** (no project files) |
 | Boot integration guide | To be added when source lands (auth, env, API base — only from real code) |
 
@@ -42,16 +43,16 @@ graph LR
   APP["mugsun-app<br/>mobile (pending)"]
   BOOT["mugsun-boot"]
   PC["mugsun-pc"]
-  UI["mugsun-uniappx-ui<br/>commercial UI kit"]
+  UI["mugsun-uniappx-ui<br/>uni-app x UI kit"]
   APP -.->|"planned: HTTP"| BOOT
   PC -->|"live"| BOOT
   UI -.->|"planned: components"| APP
 ```
 
-Related but **not open / not in this repo**:
+Related, with **source repositories not public / not in this repo**:
 
-- `mugsun-uniappx-ui` (commercial edition, source not public) — uni-app x component library; see [the ms-ui docs](https://docs.mugsun.com/en/uniappx/) for usage.
-- [mugsun-uniappx-sdk](https://github.com/mugsun/mugsun-uniappx-sdk) (private) — UTS / SDK extension intent.
+- `mugsun-uniappx-ui` (MIT, source repository not yet public) — uni-app x component library; see [the ms-ui docs](https://docs.mugsun.com/en/uniappx/) for usage.
+- [mugsun-uniappx-sdk](https://github.com/mugsun/mugsun-uniappx-sdk) (MIT, private repository) — UTS / SDK extension intent.
 
 Do not document those private repos as “clone this repo and install.”
 
@@ -63,7 +64,7 @@ Do not document those private repos as “clone this repo and install.”
 
 ## License
 
-There is no `LICENSE` file in the repository yet. The open-source license will be set when application source is published; do not assume MIT or any other license until then.
+[MIT](./LICENSE). Application source will be published under the same license.
 
 ---
 

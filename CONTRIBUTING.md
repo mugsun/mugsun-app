@@ -9,7 +9,7 @@
 ## 本仓要点
 
 - 默认分支：`main`
-- 提交信息：Conventional Commits，主题中文；详见 [`.github/COMMIT_CONVENTION.md`](./.github/COMMIT_CONVENTION.md)（若存在）
+- 提交信息：Conventional Commits，主题中文（type 用英文，如 `feat`、`fix`、`docs`、`ci`）。
 - 变更记录：见 [CHANGELOG.md](./CHANGELOG.md)
 - 文档：[docs.mugsun.com](https://docs.mugsun.com/)
 - uni-app x 示例 / 多端应用仓

@@ -66,11 +66,12 @@ mugsun 平台的**移动端应用仓库**（规划对接 mugsun-boot，基于 un
 
 ## 提交与推送
 
-- Conventional Commits，主题中文；若存在 `.github/COMMIT_CONVENTION.md` 则按其执行，否则按组织默认指南。
+- Conventional Commits，主题中文。
 - `CHANGELOG.md` 写在 `## [Unreleased]` 下，**每行不超过 80 字**。
 - 不用 `git stash`。每项工作用独立的 `git worktree`，基于 `origin/main` 建分支；本地 `main` 若已分叉，不 reset、也不推。
 - 不 force push，不 rebase 已推送的分支。
 - 不开 PR，流程是：实测 → 代码质量官审查（涉及安全的再加安全官）→ 快进合入 `origin/main`。
-- **只有分支最新的 commit 已经在分支上跑过同名必需检查、并且全绿，才可以快进推入 main。推送前用 `gh run list --commit <sha>` 自己确认。**（当前若尚无 CI，则以组织流程为准，有 workflow 后再按同名检查执行。）
+- **只有分支最新的 commit 已经在分支上跑过同名必需检查、并且全绿，才可以快进推入 main。推送前用 `gh run list --commit <sha>` 自己确认。**合入后删掉远端分支。
+- 提交的作者和提交者一律是 `Mugsun <100790155+mugsun@users.noreply.github.com>`：用 `git -c user.name=… -c user.email=… commit` 或仓库级 config，不改全局配置；已在 main 上的历史不改写。
 - 删除或下线功能，先问用户。
 - 本仓禁用 CloudAgent。

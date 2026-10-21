@@ -72,6 +72,6 @@ mugsun 平台的**移动端应用仓库**（规划对接 mugsun-boot，基于 un
 - 不 force push，不 rebase 已推送的分支。
 - 不开 PR，流程是：实测 → 代码质量官审查（涉及安全的再加安全官）→ 快进合入 `origin/main`。
 - **只有分支最新的 commit 已经在分支上跑过同名必需检查、并且全绿，才可以快进推入 main。推送前用 `gh run list --commit <sha>` 自己确认。**合入后删掉远端分支。
-- 提交的作者和提交者一律是 `Mugsun <100790155+mugsun@users.noreply.github.com>`：用 `git -c user.name=… -c user.email=… commit` 或仓库级 config，不改全局配置；已在 main 上的历史不改写。
+- 提交的作者和提交者用 `mugsun <bydongxin@gmail.com>`（不再强制 noreply）：用 `git -c user.name=mugsun -c user.email=bydongxin@gmail.com commit` 或仓库级 config，不改全局配置；已经推送的历史不改写。身份不符不判阻塞，审查时仅提示。
 - 删除或下线功能，先问用户。
 - 本仓禁用 CloudAgent。

@@ -2,13 +2,13 @@
 
 # mugsun-app
 
-[English](README_EN.md) | **简体中文** ([README.md](README.md))
+**English** | [简体中文](README.md)
 
 [![Status](https://img.shields.io/badge/status-source%20not%20published-lightgrey)](https://github.com/mugsun/mugsun-app)
 [![GitHub](https://img.shields.io/badge/GitHub-mugsun%2Fmugsun--app-181717?logo=github)](https://github.com/mugsun/mugsun-app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-Reserved repository for the **mugsun mobile client**, intended to talk to [mugsun-boot](https://github.com/mugsun/mugsun-boot). The public tree currently contains **only these README files** — no buildable app sources (`package.json`, `pages.json`, `manifest`, or feature pages).
+Reserved repository for the **mugsun mobile client**, intended to talk to [mugsun-boot](https://github.com/mugsun/mugsun-boot). The public tree currently contains **only docs and the license** (see "Current status" below) — no buildable app sources (`package.json`, `pages.json`, `manifest`, or feature pages).
 
 > Older README claims (feature lists, platform matrix, “open and run” steps) are outdated and **must not** be treated as fact. Below is only what the repository and product boundary actually show.
 
@@ -16,7 +16,7 @@ Reserved repository for the **mugsun mobile client**, intended to talk to [mugsu
 
 | Item | Fact (as of this README) |
 | --- | --- |
-| Public contents | `README.md`, `README_EN.md`, `LICENSE` |
+| Public contents | `README.md`, `README_EN.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `AGENTS.md` (`CLAUDE.md` is a symlink to it), `LICENSE` |
 | Application source | **Not published** |
 | License | [MIT](./LICENSE) |
 | Copy-paste run commands | **None** (no project files) |

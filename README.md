@@ -8,7 +8,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-mugsun%2Fmugsun--app-181717?logo=github)](https://github.com/mugsun/mugsun-app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-mugsun 平台的**移动端应用仓库**（规划对接 [mugsun-boot](https://github.com/mugsun/mugsun-boot)）。公开仓库当前**仅有本说明文件**，尚未包含可构建的应用源码（无 `package.json` / `pages.json` / `manifest` / 业务页面）。
+mugsun 平台的**移动端应用仓库**（规划对接 [mugsun-boot](https://github.com/mugsun/mugsun-boot)）。公开仓库当前**只有说明文档与许可证**（见下方「当前状态」表），尚未包含可构建的应用源码（无 `package.json` / `pages.json` / `manifest` / 业务页面）。
 
 > 旧 README 中的功能列表、平台矩阵与「打开即可跑」步骤已过时，**不得当作现状**。下列内容只陈述仓库事实与产品边界。
 
@@ -16,7 +16,7 @@ mugsun 平台的**移动端应用仓库**（规划对接 [mugsun-boot](https://g
 
 | 项 | 事实（截至本 README） |
 | --- | --- |
-| 公开内容 | `README.md`、`README_EN.md`、`LICENSE` |
+| 公开内容 | `README.md`、`README_EN.md`、`CHANGELOG.md`、`CONTRIBUTING.md`、`AGENTS.md`（`CLAUDE.md` 为其软链）、`LICENSE` |
 | 应用源码 | **未发布** |
 | 许可证 | [MIT](./LICENSE) |
 | 可复制的启动命令 | **无**（缺少工程文件） |

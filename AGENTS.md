@@ -38,7 +38,7 @@ mugsun 平台的**移动端应用仓库**（规划对接 mugsun-boot，基于 un
 ## 构建与 CI
 
 - HBuilderX/uni-app 构建只在指定构建机上跑（HBuilderX 5.26 CLI）。
-- CI 尚未建立；预期安排见「源码落地后」。
+- CI 已建最小 workflow（.github/workflows/ci.yml）：gitleaks 全历史、markdown 链接检查、osv-scanner 依赖扫描（无 lockfile 时输出「无依赖」并通过）；其余见「源码落地后」。
 
 ## 源码落地后（预期，待代码出现再核对）
 
